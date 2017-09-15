@@ -23,8 +23,6 @@
 #import "JSQMessagesInputToolbar.h"
 #import "JSQMessagesKeyboardController.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  *  The `JSQMessagesViewController` class is an abstract class that represents a view controller whose content consists of
  *  a `JSQMessagesCollectionView` and `JSQMessagesInputToolbar` and is specialized to display a messaging interface.
@@ -39,18 +37,18 @@ NS_ASSUME_NONNULL_BEGIN
  *  Returns the collection view object managed by this view controller.
  *  This view controller is the collection view's data source and delegate.
  */
-@property (weak, nonatomic, readonly, nullable) JSQMessagesCollectionView *collectionView;
+@property (weak, nonatomic, readonly) JSQMessagesCollectionView *collectionView;
 
 /**
  *  Returns the input toolbar view object managed by this view controller.
  *  This view controller is the toolbar's delegate.
  */
-@property (weak, nonatomic, readonly,  nullable) JSQMessagesInputToolbar *inputToolbar;
+@property (weak, nonatomic, readonly) JSQMessagesInputToolbar *inputToolbar;
 
 /**
  *  Returns the keyboard controller object used to manage the software keyboard.
  */
-@property (strong, nonatomic, nullable) JSQMessagesKeyboardController *keyboardController;
+@property (strong, nonatomic) JSQMessagesKeyboardController *keyboardController;
 
 /**
  *  The display name of the current user who is sending messages.
@@ -186,7 +184,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  you should also override `messagesViewController` to return your
  *  view controller loaded from your custom nib.
  */
-+ (UINib * _Nullable)nib;
++ (UINib *)nib;
 
 /**
  *  Creates and returns a new `JSQMessagesViewController` object.
@@ -195,7 +193,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return An initialized `JSQMessagesViewController` object if successful, `nil` otherwise.
  */
-+ (instancetype _Nullable)messagesViewController;
++ (instancetype)messagesViewController;
 
 #pragma mark - Messages view controller
 
@@ -327,5 +325,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)didReceiveMenuWillHideNotification:(NSNotification *)notification;
 
 @end
-
-NS_ASSUME_NONNULL_END
