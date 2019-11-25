@@ -4,10 +4,15 @@ The changelog for `JSQMessagesViewController`. Also see the [releases](https://g
 
 --------------------------------------
 
+7.3.6
+-----
+
+- Animated typing indicator (#1382)
+
 7.3.5
 -----
 
-This libary is being deprecated.
+- Library deprecated by author.
 
 7.3.4
 -----
